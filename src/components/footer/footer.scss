@@ -1,0 +1,12 @@
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 128px;
+  background-color: $text-dark-500;
+  padding: $padding-screen;
+  display: flex;
+  align-items: center;  
+  color: $light;
+  gap: 45px;
+}

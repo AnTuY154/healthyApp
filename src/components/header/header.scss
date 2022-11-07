@@ -1,0 +1,39 @@
+.header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 64px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $text-dark-500;
+  padding: $padding-screen;
+  &-items {
+    display: flex;
+    gap: 20px;
+
+    & > .icon {
+      margin-left: 40px;
+    }
+  }
+
+  &-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > p {
+      color: $light;
+      margin-left: 10px;
+    }
+  }
+
+  &-logo {
+    height: 90%;
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
