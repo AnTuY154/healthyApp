@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon } from "../../icon/icon";
+import Icon from "../../icon/icon";
 import "../header.scss";
 import { HeaderItemType } from "../type";
 

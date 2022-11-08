@@ -1,0 +1,20 @@
+.hexagon {
+  cursor: pointer;
+  flex-direction: column;
+  height: 136px;
+  width: 136px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $primary-300-400;
+  color: $light;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  & > .icon {
+    width: 53px;
+    height: 45px;
+  }
+
+}

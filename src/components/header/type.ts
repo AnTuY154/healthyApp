@@ -5,4 +5,13 @@ interface HeaderItemType {
   text: string;
 }
 
-export type { HeaderItemType };
+interface HeaderMenuItemType {
+  label: string;
+  path: string;
+}
+
+interface HeaderMenuListType {
+  menu: HeaderMenuItemType[]
+}
+
+export type { HeaderItemType,HeaderMenuListType,HeaderMenuItemType };

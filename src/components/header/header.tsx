@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./header.scss";
 import Logo from "Assets/img/logo.jpg";
-import { Icon } from "../icon/icon";
 import { HeaderItem } from "./headerItem/headerItem";
-import { HeaderItemType } from "./type";
+import { HeaderItemType, HeaderMenuItemType } from "./type";
+import { HeaderMenu } from "./headerMenu/headerMenu";
 
 export function Header() {
   const [headerData, setHeaderData] = useState<HeaderItemType[]>([]);
+  const [headerMenu, setHeaderMenu] = useState<HeaderMenuItemType[]>([]);
 
   useEffect(() => {
     // call api header
@@ -31,6 +32,33 @@ export function Header() {
         text: "お知らせ",
       },
     ]);
+
+    setHeaderMenu([
+      {
+        label: "自分の記録",
+        path: "menu1",
+      },
+      {
+        label: "体重グラフ",
+        path: "menu2",
+      },
+      {
+        label: "目標",
+        path: "menu3",
+      },
+      {
+        label: "選択中のコース",
+        path: "menu4",
+      },
+      {
+        label: "コラム一覧",
+        path: "menu5",
+      },
+      {
+        label: "設定",
+        path: "menu6",
+      },
+    ]);
   }, []);
 
   return (
@@ -42,7 +70,8 @@ export function Header() {
         {headerData?.map((item, index) => (
           <HeaderItem key={index} icon={item.icon} text={item.text} />
         ))}
-        <Icon name="menu" />
+        <HeaderMenu menu={headerMenu}/>
+        {/* <Icon name="menu" /> */}
       </div>
     </div>
   );

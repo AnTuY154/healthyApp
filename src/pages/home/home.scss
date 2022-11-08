@@ -1,0 +1,29 @@
+.home {
+    // padding-bottom: 128px;
+
+    &-thumnail {
+        display: flex;
+        flex-direction: row;
+        height: 316px;
+        &-date {
+            width: 30%;
+
+            & >img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-body_weight {
+            width: 70%;
+            background-color: $dark-600;
+            padding: 10px 30px;
+        }
+    }
+
+    &-transit {
+        display: flex;
+        
+    }
+}

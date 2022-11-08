@@ -62,13 +62,24 @@ module.exports = {
           name: "static/media/[name].[hash:8].[ext]",
         },
       },
+      // {
+      //   test: /\.(png|jpe?g|gif|jp2|webp)$/,
+      //   loader: require.resolve("file-loader"),
+      //   options: {
+      //     name: 'images/[name].[ext]'
+      //   }
+      // },
       {
-        test: /\.(png|jpe?g|gif|jp2|webp)$/,
-        loader: 'file-loader',
-        options: {
-          name: 'images/[name].[ext]'
+        test: /\.(jpe?g|gif|png)$/i,
+        use: [
+        {
+          loader: 'url-loader',
+          options: {
+            limit: 10000
+          }
         }
-      }
+      ]
+    }
     ],
   },
   resolve: {
