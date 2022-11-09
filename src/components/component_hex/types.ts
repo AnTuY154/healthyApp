@@ -1,10 +1,11 @@
 import { IconProps } from "../icon/types"
+import { MealType } from "../info_card/types"
 
 interface HexComponentProps {
   icon: IconProps
-  onClick?: ()=>void
-  text: string
+  onClick?: () => void
+  text: MealType
 }
 
 
-export type {HexComponentProps}
+export type { HexComponentProps }

@@ -2,6 +2,8 @@ import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import { App } from "../App";
 import React from "react";
 import { Home } from "../pages/home/home";
+import { Record } from "../pages/record/record";
+import { Column } from "../pages/column/column";
 
 export const router = createBrowserRouter([
   {
@@ -14,11 +16,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/my_record",
-        element: <Home />,
+        element: <Record />,
       },
       {
-        path: "/column_oage",
-        element: <Home />,
+        path: "/column_page",
+        element: <Column />,
       },
     ],
   },

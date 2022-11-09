@@ -2,12 +2,13 @@ import React from "react";
 import Icon from "../../icon/icon";
 import "../header.scss";
 import { HeaderItemType } from "../type";
+import { Link } from "react-router-dom";
 
-export function HeaderItem({ icon, text }: HeaderItemType) {
+export function HeaderItem({ icon, text, path }: HeaderItemType) {
   return (
-    <div className="header-item">
-      <Icon name={icon.name} noticationNumber={icon.noticationNumber} />
+    <Link className="header-item" to={path}>
+      <Icon name={icon.name} notification={icon.notification} />
       <p>{text}</p>
-    </div>
+    </Link>
   );
 }

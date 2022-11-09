@@ -1,0 +1,43 @@
+$margin-top-element: 40px;
+
+.record {
+  padding: $padding-body;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: $content-width;
+
+  &_card {
+    display: flex;
+    justify-content: space-between;
+
+    & > * {
+      flex: 0 0 25%;
+    }
+  }
+
+  &_body {
+    height: 304px;
+  }
+
+  &_diary {
+    & > p {
+      font-size: 22px;
+      line-height: 27px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      row-gap: 10px;
+      margin-top: 25px;
+
+      & > * {
+        flex: 0 0 24%;
+      }
+    }
+  }
+}

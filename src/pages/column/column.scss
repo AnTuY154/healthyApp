@@ -1,0 +1,31 @@
+$margin-top-element: 40px;
+
+.column_page {
+  padding: $padding-body;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: $content-width;
+
+  &_card {
+    display: flex;
+    justify-content: space-between;
+
+    & > * {
+      flex: 0 0 23%;
+    }
+  }
+
+  &_list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    margin-top: 25px;
+
+    & > * {
+      flex: 0 0 24%;
+    }
+  }
+
+}

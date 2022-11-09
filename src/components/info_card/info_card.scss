@@ -1,0 +1,37 @@
+.info_card {
+  &-thumbnail {
+    position: relative;
+
+    height: 234px;
+    &-time {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: $primary-300;
+      color: $light;
+      padding: 7px 8px;
+    }
+  }
+
+  &-content {
+    font-family: Hiragino Kaku Gothic Pro;
+    cursor: pointer;
+    &-title {
+      font-size: 15px;
+        line-height: 22px;
+        height: 44px;       /* height is 2x line-height, so two lines will display */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        letter-spacing: 0.08px;
+    }
+
+    &-tag {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-start;
+        align-items: center;
+        color: $primary-400;
+    }
+  }
+}

@@ -56,11 +56,16 @@ module.exports = {
         ],
       },
       {
-        test: /\.(eot|otf|ttf|woff|woff2)$/,
-        loader: require.resolve("file-loader"),
-        options: {
-          name: "static/media/[name].[hash:8].[ext]",
-        },
+        test: /\.(woff(2)?|ttf|eot|otf)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/'
+            }
+          }
+        ]
       },
       // {
       //   test: /\.(png|jpe?g|gif|jp2|webp)$/,

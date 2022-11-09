@@ -18,10 +18,12 @@ export function Footer() {
 
   return (
     <div className="footer">
-   
-       {footerData?.map((item,index) => (
+      <div className="container">
+      {footerData?.map((item,index) => (
         <p key={index}>{item}</p>
       ))}
+   
+      </div>
    
  
     </div>

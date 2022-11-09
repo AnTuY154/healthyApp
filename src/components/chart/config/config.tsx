@@ -6,6 +6,7 @@ export const options = {
     },
     title: {
       display: false,
+
     },
   },
   scales: {
@@ -20,6 +21,7 @@ export const options = {
         color: "#FFFFFF",
         font: {
           size: 12,
+          family: 'Hiragino Kaku Gothic Pro'
         },
       },
       grid: {

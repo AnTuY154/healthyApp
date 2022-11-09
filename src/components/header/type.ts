@@ -3,6 +3,7 @@ import { IconProps } from "../icon/types";
 interface HeaderItemType {
   icon: IconProps;
   text: string;
+  path: string
 }
 
 interface HeaderMenuItemType {

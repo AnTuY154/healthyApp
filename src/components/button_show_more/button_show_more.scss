@@ -1,0 +1,24 @@
+.button_show_more {
+    font-family: Hiragino Kaku Gothic Pro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > button {
+      margin-top: 28px;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 26px;
+      padding: 16px 76px;
+      text-align: center;
+      background: $primary-300-400;
+      color: $light;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+}

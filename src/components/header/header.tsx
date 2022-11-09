@@ -4,6 +4,7 @@ import Logo from "Assets/img/logo.jpg";
 import { HeaderItem } from "./headerItem/headerItem";
 import { HeaderItemType, HeaderMenuItemType } from "./type";
 import { HeaderMenu } from "./headerMenu/headerMenu";
+import { Link } from "react-router-dom";
 
 export function Header() {
   const [headerData, setHeaderData] = useState<HeaderItemType[]>([]);
@@ -17,19 +18,22 @@ export function Header() {
           name: "memo",
         },
         text: "自分の記録",
+        path: "my_record",
       },
       {
         icon: {
           name: "challenge",
         },
         text: "チャレンジ",
+        path: "",
       },
       {
         icon: {
           name: "info",
-          noticationNumber: 1,
+          notification: 1,
         },
         text: "お知らせ",
+        path: "",
       },
     ]);
 
@@ -52,7 +56,7 @@ export function Header() {
       },
       {
         label: "コラム一覧",
-        path: "menu5",
+        path: "column_page",
       },
       {
         label: "設定",
@@ -62,17 +66,27 @@ export function Header() {
   }, []);
 
   return (
-    <div className="header">
+    <div id="header" className="header">
+      <div className="container">
       <div className="header-logo">
-        <img src={Logo} />
+        <Link to="top_page">
+          <img src={Logo} />
+        </Link>
       </div>
+
       <div className="header-items">
         {headerData?.map((item, index) => (
-          <HeaderItem key={index} icon={item.icon} text={item.text} />
+          <HeaderItem
+            key={index}
+            icon={item.icon}
+            text={item.text}
+            path={item.path}
+          />
         ))}
-        <HeaderMenu menu={headerMenu}/>
-        {/* <Icon name="menu" /> */}
+        <HeaderMenu menu={headerMenu} />
       </div>
+      </div>
+   
     </div>
   );
 }

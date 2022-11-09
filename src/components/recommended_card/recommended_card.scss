@@ -1,0 +1,29 @@
+.recommended_card{
+  background-color: $dark-600;
+  padding: 24px 5px;
+  text-align: center;
+
+  &-title {
+    color: $primary-300;
+    text-transform: uppercase;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.11px;
+    font-weight: 400;
+  }
+
+  &-description {
+    font-family: Hiragino Kaku Gothic Pro;
+    color: $light;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 300;
+  }
+
+  &-line {
+    width: 56px;
+    height: 1px;
+    margin: 10px auto;
+    background: $light;
+  }
+}

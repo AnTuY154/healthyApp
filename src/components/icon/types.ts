@@ -1,8 +1,10 @@
+import React from "react"
+
 interface IconProps {
   name: string,
-  noticationNumber?: number
-  onClick?: ()=>void
+  notification?: number
+  onClick?: (e: React.MouseEvent<HTMLDivElement>) => void
 }
 
 
-export type {IconProps}
+export type { IconProps }

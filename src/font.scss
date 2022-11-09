@@ -1,6 +1,9 @@
-// @font-face {
-//     font-family: 'MyFont';
-//     src: local('MyFont'), url(./fonts/MyFont.woff) format('woff');
-//     /* other formats include: 'woff2', 'truetype, 'opentype',
-//                               'embedded-opentype', and 'svg' */
-//   }
+@font-face {
+    font-family:"Hiragino Kaku Gothic Pro";
+    src:  url("./assets/fonts/Noto/NotoSansJP-Light.otf")
+}
+  
+  @font-face {
+      font-family: "Inter";
+      src:  url("./assets/fonts/Inter/Inter-Light.ttf")
+}  

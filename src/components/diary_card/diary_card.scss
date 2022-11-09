@@ -1,0 +1,25 @@
+.diary_card{
+
+    border: 2px solid #707070;
+    padding: 16px;
+    overflow: hidden;
+
+    &-time {
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 400;
+    }
+
+    &-description {
+      font-family: Hiragino Kaku Gothic Pro;
+      font-size: 12px;
+      line-height: 17px;
+      font-weight: 300;
+      text-overflow: ellipsis;
+      letter-spacing: 0.06px;
+      margin-top: 10px;
+    }
+
+
+    
+}
