@@ -1,7 +1,7 @@
 interface RecommendedCardType {
-    title: string,
-    description: string,
-    onClick?: () => void
+  title: string
+  description: string
+  onClick?: () => void
 }
 
-export type { RecommendedCardType };
+export type { RecommendedCardType }

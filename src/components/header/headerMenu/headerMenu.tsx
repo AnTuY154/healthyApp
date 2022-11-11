@@ -1,32 +1,32 @@
-import React, { useCallback, useEffect, useState } from "react";
-import Icon from "../../icon/icon";
-import "../header.scss";
-import { HeaderMenuListType } from "../type";
-import { Link } from "react-router-dom";
+import React, { useCallback, useEffect, useState } from 'react'
+import Icon from '../../icon/icon'
+import '../header.scss'
+import { HeaderMenuListType } from '../type'
+import { Link } from 'react-router-dom'
 
-export function HeaderMenu({ menu = [] }: HeaderMenuListType) {
-  const [toggle, setToggle] = useState<boolean>(false);
+export function HeaderMenu ({ menu = [] }: HeaderMenuListType): JSX.Element {
+  const [toggle, setToggle] = useState<boolean>(false)
 
   const handleToggle = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    e.stopPropagation();
-    setToggle((current) => !current);
-  }, []);
+    e.stopPropagation()
+    setToggle((current) => !current)
+  }, [])
 
   const handleCloseToggle = useCallback(() => {
     setToggle((current) => {
       if (current) {
-        return !current;
+        return !current
       }
-      return current;
-    });
-  }, []);
+      return current
+    })
+  }, [])
 
   useEffect(() => {
-    window.addEventListener("click", handleCloseToggle);
+    window.addEventListener('click', handleCloseToggle)
     return () => {
-      window.removeEventListener("click", handleCloseToggle);
-    };
-  }, []);
+      window.removeEventListener('click', handleCloseToggle)
+    }
+  }, [])
 
   return (
     <div className="header-menu">
@@ -34,7 +34,8 @@ export function HeaderMenu({ menu = [] }: HeaderMenuListType) {
         onClick={handleToggle}
         name="menu"
       />
-      {toggle ? (
+      {toggle
+        ? (
         <div className="header-menu-items">
           {menu?.map((item) => (
             <Link key={item.path} to={item.path}>
@@ -42,7 +43,8 @@ export function HeaderMenu({ menu = [] }: HeaderMenuListType) {
             </Link>
           ))}
         </div>
-      ) : null}
+          )
+        : null}
     </div>
-  );
+  )
 }

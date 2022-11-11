@@ -13,7 +13,6 @@ module.exports = {
     watchContentBase: true,
     compress: true,
     historyApiFallback: true,
-    open: true,
     overlay: true,
   },
   devtool: "inline-cheap-source-map",
@@ -40,15 +39,11 @@ module.exports = {
           },
         ],
       },
-      // {
-      //   test: /\.svg$/,
-      //   use: ["@svgr/webpack"],
-      // },
       {
         test: /\.svg$/,
         use: [
           {
-            loader: 'svg-url-loader',
+            loader: "svg-url-loader",
             options: {
               limit: 10000,
             },
@@ -59,26 +54,19 @@ module.exports = {
         test: /\.(woff(2)?|ttf|eot|otf)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              name: '[name].[ext]',
-              outputPath: 'fonts/'
+              name: "[name].[ext]",
+              outputPath: "fonts/"
             }
           }
         ]
       },
-      // {
-      //   test: /\.(png|jpe?g|gif|jp2|webp)$/,
-      //   loader: require.resolve("file-loader"),
-      //   options: {
-      //     name: 'images/[name].[ext]'
-      //   }
-      // },
       {
         test: /\.(jpe?g|gif|png)$/i,
         use: [
         {
-          loader: 'url-loader',
+          loader: "url-loader",
           options: {
             limit: 10000
           }

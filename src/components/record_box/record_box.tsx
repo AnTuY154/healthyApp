@@ -1,9 +1,9 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
-import { getImageSrc } from "../../common/common";
-import "./record_box.scss";
-import { RecordBoxType } from "./type";
+import React from 'react'
+import { getImageSrc } from '../../common/common'
+import './record_box.scss'
+import { RecordBoxType } from './type'
 
-export function RecordBox({ description, title, image }: RecordBoxType) {
+export function RecordBox ({ description, title, image }: RecordBoxType): JSX.Element {
   return (
     <div className="record_box">
       <img src={getImageSrc(image)} />
@@ -15,5 +15,5 @@ export function RecordBox({ description, title, image }: RecordBoxType) {
         </div>
       </div>
     </div>
-  );
+  )
 }

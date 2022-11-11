@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
-import "./button_show_more.scss";
-import { ButtonType } from "./type";
+import React from 'react'
+import './button_show_more.scss'
+import { ButtonType } from './type'
 
-export function ButtonShowMore({ onClick, text, className }: ButtonType) {
+export function ButtonShowMore ({ onClick, text, className = '' }: ButtonType): JSX.Element {
   return (
-    <div className={`button_show_more ${className ? className : ""}`}>
+    <div className={`button_show_more ${className}`}>
       <button onClick={onClick}>{text}</button>
     </div>
-  );
+  )
 }

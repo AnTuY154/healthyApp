@@ -1,8 +1,7 @@
 
-
 interface DiaryCardType {
-    time: string
-    description: string
+  time: string
+  description: string
 }
 
-export type { DiaryCardType };
+export type { DiaryCardType }
